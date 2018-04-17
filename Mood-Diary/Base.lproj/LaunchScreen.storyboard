@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKk-Ag-YXt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="9X6-xu-Z3s">
+            <objects>
+                <viewController id="PKk-Ag-YXt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HYm-cc-CcO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="0B5-Ap-W5A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made by Magnus Nordmo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="7U5-sc-H0p">
+                                <rect key="frame" x="24" y="610" width="327" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.80078125" blue="0.95762803819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0B5-Ap-W5A" secondAttribute="trailing" id="BGL-vx-3x1"/>
+                            <constraint firstItem="0B5-Ap-W5A" firstAttribute="top" secondItem="HYm-cc-CcO" secondAttribute="top" id="Vze-WQ-ilw"/>
+                            <constraint firstItem="z86-Ly-jzF" firstAttribute="trailing" secondItem="7U5-sc-H0p" secondAttribute="trailing" constant="24" id="XXb-io-Fg5"/>
+                            <constraint firstItem="0B5-Ap-W5A" firstAttribute="leading" secondItem="HYm-cc-CcO" secondAttribute="leading" id="dCv-wY-6Bf"/>
+                            <constraint firstItem="7U5-sc-H0p" firstAttribute="leading" secondItem="z86-Ly-jzF" secondAttribute="leading" constant="24" id="i7E-G5-kzA"/>
+                            <constraint firstItem="z86-Ly-jzF" firstAttribute="bottom" secondItem="7U5-sc-H0p" secondAttribute="bottom" constant="24" id="n7j-Zc-YGb"/>
+                            <constraint firstAttribute="bottom" secondItem="0B5-Ap-W5A" secondAttribute="bottom" id="uHf-wB-1Iz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z86-Ly-jzF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCn-rm-tdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash.png" width="1334" height="750"/>
+    </resources>
+</document>

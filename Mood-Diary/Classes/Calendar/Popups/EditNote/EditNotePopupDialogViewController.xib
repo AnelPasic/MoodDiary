@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+            <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditNotePopupDialogViewController" customModule="Mood_Diary" customModuleProvider="target">
+            <connections>
+                <outlet property="actionContainerView" destination="D6p-AN-xRk" id="J8Q-wI-sDo"/>
+                <outlet property="closeButton" destination="YVj-bG-oMm" id="FEy-Gr-BjQ"/>
+                <outlet property="completeView" destination="c2s-ju-d29" id="8GZ-66-lNH"/>
+                <outlet property="completeViewBottomConstraint" destination="cRV-7g-ZnT" id="EFW-Wf-t4W"/>
+                <outlet property="deleteButton" destination="kAs-FY-MyJ" id="u1e-1Z-xQq"/>
+                <outlet property="newSaveButton" destination="ipM-QI-6XQ" id="Zt3-8R-eW7"/>
+                <outlet property="saveButton" destination="WzY-kX-ylB" id="dSb-2c-lBl"/>
+                <outlet property="textView" destination="ui1-mO-2P1" id="c4W-sP-j9d"/>
+                <outlet property="titleLabel" destination="38c-NF-O6X" id="KiD-nJ-RG3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="completeButtons" destination="92p-Ho-MAy" collectionClass="NSMutableArray" id="KtV-8K-CEL"/>
+                <outletCollection property="completeButtons" destination="6VD-DT-XGq" collectionClass="NSMutableArray" id="YVy-fE-XJT"/>
+                <outletCollection property="completeButtons" destination="kns-0W-VRj" collectionClass="NSMutableArray" id="th9-F0-NWl"/>
+                <outletCollection property="completeButtons" destination="m8B-Z4-sdW" collectionClass="NSMutableArray" id="PQ6-rK-CoC"/>
+                <outletCollection property="completeButtons" destination="HX5-GN-UAy" collectionClass="NSMutableArray" id="1cY-MG-SnB"/>
+                <outletCollection property="smileImageViews" destination="4mY-tW-vDD" collectionClass="NSMutableArray" id="lKp-ip-91N"/>
+                <outletCollection property="smileImageViews" destination="iqT-5a-kPD" collectionClass="NSMutableArray" id="IRp-GJ-oUK"/>
+                <outletCollection property="smileImageViews" destination="5QP-If-42P" collectionClass="NSMutableArray" id="wz7-Ql-WZ1"/>
+                <outletCollection property="smileImageViews" destination="v6m-p7-bCE" collectionClass="NSMutableArray" id="NDK-It-GdS"/>
+                <outletCollection property="smileImageViews" destination="Y99-Pm-0Bj" collectionClass="NSMutableArray" id="EbM-3H-9J0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="381"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwF-so-wes">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38c-NF-O6X">
+                            <rect key="frame" x="8" y="11" width="79" height="19.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                            <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-bG-oMm">
+                            <rect key="frame" x="347" y="10" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="4bF-Lw-hkQ"/>
+                                <constraint firstAttribute="height" constant="20" id="a78-Zn-aWp"/>
+                            </constraints>
+                            <state key="normal" image="icon_close"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ase-LR-7ZP"/>
+                        <constraint firstAttribute="trailing" secondItem="YVj-bG-oMm" secondAttribute="trailing" constant="8" id="Uep-sX-eiy"/>
+                        <constraint firstItem="YVj-bG-oMm" firstAttribute="centerY" secondItem="wwF-so-wes" secondAttribute="centerY" id="cC5-ae-Z27"/>
+                        <constraint firstItem="38c-NF-O6X" firstAttribute="centerY" secondItem="wwF-so-wes" secondAttribute="centerY" id="cf8-Ya-aQQ"/>
+                        <constraint firstItem="38c-NF-O6X" firstAttribute="leading" secondItem="wwF-so-wes" secondAttribute="leading" constant="8" id="jfF-bO-Peo"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ui1-mO-2P1" customClass="BorderTextView" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="16" y="56" width="343" height="80"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="cB2-Ql-U2z"/>
+                    </constraints>
+                    <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2s-ju-d29">
+                    <rect key="frame" x="8" y="152" width="359" height="149"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-EA-XmI">
+                            <rect key="frame" x="109.5" y="0.0" width="141" height="24"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFT-gW-o86">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="OBt-yK-vb9"/>
+                                        <constraint firstAttribute="width" constant="24" id="SvZ-v1-JNn"/>
+                                    </constraints>
+                                    <state key="normal" image="icon_active_completed"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxz-AD-KAE">
+                                    <rect key="frame" x="32" y="0.0" width="109" height="24"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did you feel during the activity?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ls-ri-rhj">
+                            <rect key="frame" x="56" y="32" width="247.5" height="19.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JG9-Pc-AfB">
+                            <rect key="frame" x="16" y="85" width="327" height="1"/>
+                            <color key="backgroundColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1.5" id="bhk-Js-jSO"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G9R-Lm-ZuT">
+                            <rect key="frame" x="8" y="67.5" width="343" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92p-Ho-MAy" customClass="CompleteButton" customModule="Mood_Diary" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="foJ-ZG-stA"/>
+                                        <constraint firstAttribute="height" constant="36" id="rwU-Wr-Y48"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                                    <state key="normal" title="1">
+                                        <color key="titleColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="71X-rd-5DM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VD-DT-XGq" customClass="CompleteButton" customModule="Mood_Diary" customModuleProvider="target">
+                                    <rect key="frame" x="77" y="0.0" width="36" height="36"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="hlb-2f-akt"/>
+                                        <constraint firstAttribute="height" constant="36" id="kvH-b2-OFs"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                                    <state key="normal" title="2">
+                                        <color key="titleColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="cHU-Fw-2en"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kns-0W-VRj" customClass="CompleteButton" customModule="Mood_Diary" customModuleProvider="target">
+                                    <rect key="frame" x="153.5" y="0.0" width="36" height="36"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="QSQ-Ls-YYo"/>
+                                        <constraint firstAttribute="width" constant="36" id="fnT-Pg-Xl5"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                                    <state key="normal" title="3">
+                                        <color key="titleColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="VvO-Lv-B6A"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8B-Z4-sdW" customClass="CompleteButton" customModule="Mood_Diary" customModuleProvider="target">
+                                    <rect key="frame" x="230.5" y="0.0" width="36" height="36"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="1KL-lC-nOl"/>
+                                        <constraint firstAttribute="height" constant="36" id="AbZ-Ls-sYL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                                    <state key="normal" title="4">
+                                        <color key="titleColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="mg3-Ft-kSR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX5-GN-UAy" customClass="CompleteButton" customModule="Mood_Diary" customModuleProvider="target">
+                                    <rect key="frame" x="307" y="0.0" width="36" height="36"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="Xau-XN-jFC"/>
+                                        <constraint firstAttribute="height" constant="36" id="eyK-KR-fx4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
+                                    <state key="normal" title="5">
+                                        <color key="titleColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="m4g-9f-YZS"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </stackView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_smile1" translatesAutoresizingMaskIntoConstraints="NO" id="4mY-tW-vDD">
+                            <rect key="frame" x="11" y="111.5" width="30" height="30"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_smile2" translatesAutoresizingMaskIntoConstraints="NO" id="iqT-5a-kPD">
+                            <rect key="frame" x="88" y="111" width="30" height="30"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_smile3" translatesAutoresizingMaskIntoConstraints="NO" id="5QP-If-42P">
+                            <rect key="frame" x="165" y="111" width="30" height="30"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_smile4" translatesAutoresizingMaskIntoConstraints="NO" id="v6m-p7-bCE">
+                            <rect key="frame" x="241" y="111.5" width="30" height="30"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_smile5" translatesAutoresizingMaskIntoConstraints="NO" id="Y99-Pm-0Bj">
+                            <rect key="frame" x="318" y="111" width="30" height="30"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="9Ls-ri-rhj" firstAttribute="centerX" secondItem="c2s-ju-d29" secondAttribute="centerX" id="0Pi-bW-NgQ"/>
+                        <constraint firstAttribute="trailing" secondItem="G9R-Lm-ZuT" secondAttribute="trailing" constant="8" id="0Qw-Z1-mbI"/>
+                        <constraint firstItem="Y99-Pm-0Bj" firstAttribute="centerX" secondItem="HX5-GN-UAy" secondAttribute="centerX" id="5Op-GZ-cCb"/>
+                        <constraint firstItem="4mY-tW-vDD" firstAttribute="centerX" secondItem="92p-Ho-MAy" secondAttribute="centerX" id="6Q4-UA-BaG"/>
+                        <constraint firstItem="Y99-Pm-0Bj" firstAttribute="top" secondItem="4mY-tW-vDD" secondAttribute="top" id="778-Dx-XOm"/>
+                        <constraint firstItem="JG9-Pc-AfB" firstAttribute="trailing" secondItem="G9R-Lm-ZuT" secondAttribute="trailing" constant="-8" id="83H-6n-Snt"/>
+                        <constraint firstItem="4mY-tW-vDD" firstAttribute="top" secondItem="G9R-Lm-ZuT" secondAttribute="bottom" constant="8" id="8ZF-8H-CCs"/>
+                        <constraint firstItem="uG4-EA-XmI" firstAttribute="top" secondItem="c2s-ju-d29" secondAttribute="top" id="CnC-Ap-VTE"/>
+                        <constraint firstItem="G9R-Lm-ZuT" firstAttribute="top" secondItem="9Ls-ri-rhj" secondAttribute="bottom" constant="16" id="Cq2-wb-2eu"/>
+                        <constraint firstItem="JG9-Pc-AfB" firstAttribute="leading" secondItem="G9R-Lm-ZuT" secondAttribute="leading" constant="8" id="Erk-Pj-FKZ"/>
+                        <constraint firstItem="5QP-If-42P" firstAttribute="centerX" secondItem="kns-0W-VRj" secondAttribute="centerX" id="GSc-5e-NL5"/>
+                        <constraint firstAttribute="bottom" secondItem="5QP-If-42P" secondAttribute="bottom" constant="8" id="KhT-br-Oo9"/>
+                        <constraint firstItem="v6m-p7-bCE" firstAttribute="centerX" secondItem="m8B-Z4-sdW" secondAttribute="centerX" id="Li1-Lu-Vdq"/>
+                        <constraint firstItem="JG9-Pc-AfB" firstAttribute="centerY" secondItem="G9R-Lm-ZuT" secondAttribute="centerY" id="MGx-p3-5eG"/>
+                        <constraint firstItem="iqT-5a-kPD" firstAttribute="centerX" secondItem="6VD-DT-XGq" secondAttribute="centerX" id="PzX-TC-MMu"/>
+                        <constraint firstItem="v6m-p7-bCE" firstAttribute="top" secondItem="4mY-tW-vDD" secondAttribute="top" id="QL7-n4-Q00"/>
+                        <constraint firstItem="iqT-5a-kPD" firstAttribute="top" secondItem="4mY-tW-vDD" secondAttribute="top" id="ZaI-tp-6J3"/>
+                        <constraint firstItem="9Ls-ri-rhj" firstAttribute="top" secondItem="uG4-EA-XmI" secondAttribute="bottom" constant="8" id="i0a-nn-9NW"/>
+                        <constraint firstItem="uG4-EA-XmI" firstAttribute="centerX" secondItem="c2s-ju-d29" secondAttribute="centerX" id="iPh-qF-idn"/>
+                        <constraint firstItem="5QP-If-42P" firstAttribute="top" secondItem="4mY-tW-vDD" secondAttribute="top" id="jwH-Ij-8Yn"/>
+                        <constraint firstItem="G9R-Lm-ZuT" firstAttribute="leading" secondItem="c2s-ju-d29" secondAttribute="leading" constant="8" id="taF-xS-qhJ"/>
+                    </constraints>
+                </view>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="D6p-AN-xRk">
+                    <rect key="frame" x="141" y="335" width="92" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzY-kX-ylB" customClass="CircleButton" customModule="Mood_Diary" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="Rm7-6T-1t1"/>
+                                <constraint firstAttribute="height" constant="30" id="qbZ-dq-4Ql"/>
+                            </constraints>
+                            <state key="normal" image="icon_check"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAs-FY-MyJ" customClass="CircleButton" customModule="Mood_Diary" customModuleProvider="target">
+                            <rect key="frame" x="62" y="0.0" width="30" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="ceW-Mp-URV"/>
+                                <constraint firstAttribute="height" constant="30" id="tFl-6H-Iys"/>
+                            </constraints>
+                            <state key="normal" image="icon_delete"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipM-QI-6XQ" customClass="CircleButton" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="172" y="335" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="d7r-49-iv0"/>
+                        <constraint firstAttribute="width" constant="30" id="ewG-3d-1wM"/>
+                    </constraints>
+                    <state key="normal" image="icon_check"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ui1-mO-2P1" secondAttribute="trailing" constant="16" id="0Wz-V2-DBh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wwF-so-wes" secondAttribute="trailing" id="8g2-o0-YFO"/>
+                <constraint firstItem="ui1-mO-2P1" firstAttribute="top" secondItem="wwF-so-wes" secondAttribute="bottom" constant="16" id="9b2-NR-eHL"/>
+                <constraint firstItem="c2s-ju-d29" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="BwI-6t-ZKR"/>
+                <constraint firstItem="wwF-so-wes" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="E90-2E-CCT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="D6p-AN-xRk" secondAttribute="bottom" constant="16" id="JQx-Sk-801"/>
+                <constraint firstItem="ipM-QI-6XQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M6f-0p-DEU"/>
+                <constraint firstItem="D6p-AN-xRk" firstAttribute="top" secondItem="ipM-QI-6XQ" secondAttribute="top" id="WXE-OH-igw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c2s-ju-d29" secondAttribute="trailing" constant="8" id="Zu1-Bp-xMu"/>
+                <constraint firstItem="D6p-AN-xRk" firstAttribute="top" secondItem="c2s-ju-d29" secondAttribute="bottom" priority="250" constant="8" id="cRV-7g-ZnT"/>
+                <constraint firstItem="D6p-AN-xRk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hsj-Kc-ad5"/>
+                <constraint firstItem="wwF-so-wes" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jB2-UX-fBv"/>
+                <constraint firstItem="D6p-AN-xRk" firstAttribute="top" secondItem="ui1-mO-2P1" secondAttribute="bottom" priority="251" constant="16" id="msw-cF-zYu"/>
+                <constraint firstItem="c2s-ju-d29" firstAttribute="top" secondItem="ui1-mO-2P1" secondAttribute="bottom" constant="16" id="nRv-mc-LFQ"/>
+                <constraint firstItem="ui1-mO-2P1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pFm-1K-iuL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="25.5" y="-91.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_active_completed" width="30" height="30"/>
+        <image name="icon_check" width="20" height="15"/>
+        <image name="icon_close" width="30" height="30"/>
+        <image name="icon_delete" width="24" height="24"/>
+        <image name="icon_smile1" width="30" height="30"/>
+        <image name="icon_smile2" width="30" height="30"/>
+        <image name="icon_smile3" width="30" height="30"/>
+        <image name="icon_smile4" width="30" height="30"/>
+        <image name="icon_smile5" width="30" height="30"/>
+    </resources>
+</document>

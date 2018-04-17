@@ -1,0 +1,6 @@
+framework module Pods_Mood_Diary {
+  umbrella header "Pods-Mood-Diary-umbrella.h"
+
+  export *
+  module * { export * }
+}

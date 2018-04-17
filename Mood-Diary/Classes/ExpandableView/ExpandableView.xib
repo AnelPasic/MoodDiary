@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpandableView" customModule="Mood_Diary" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="1ik-jU-eaE" id="7kA-L5-70L"/>
+                <outlet property="headerContainerView" destination="C7K-oW-dUD" id="Wjj-0A-srU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ik-jU-eaE">
+                    <rect key="frame" x="0.0" y="60" width="375" height="109"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7K-oW-dUD" customClass="ExpandableHeader" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="251" constant="60" id="LhX-sn-iUv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1ik-jU-eaE" secondAttribute="trailing" id="1xx-Yu-AY1"/>
+                <constraint firstItem="C7K-oW-dUD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BJQ-xZ-vap"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C7K-oW-dUD" secondAttribute="trailing" id="EYg-Ac-jjr"/>
+                <constraint firstItem="1ik-jU-eaE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MiS-5B-BZO"/>
+                <constraint firstItem="C7K-oW-dUD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SeE-sI-OLv"/>
+                <constraint firstItem="1ik-jU-eaE" firstAttribute="top" secondItem="C7K-oW-dUD" secondAttribute="bottom" id="bnT-fc-SQw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1ik-jU-eaE" secondAttribute="bottom" id="glR-vG-25F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="26.5" y="-197.5"/>
+        </view>
+    </objects>
+</document>

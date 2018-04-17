@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllCalendarNavigationView" customModule="Mood_Diary" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarButton" destination="pzF-Nm-lK7" id="6ar-rb-cxh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRk-Pf-DEP" customClass="RoundedButton" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="275" y="3" width="84" height="34"/>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                    <state key="normal" title="Current">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="currentAction:" destination="-1" eventType="touchUpInside" id="3Nl-zc-9yo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTn-98-MiD" customClass="CircleButton" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="16" y="5" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="P1y-pk-CdU"/>
+                        <constraint firstAttribute="height" constant="30" id="hTj-61-WQv"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                    <state key="normal" image="icon_prev"/>
+                    <connections>
+                        <action selector="prevAction:" destination="-1" eventType="touchUpInside" id="fKt-cx-Q97"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sul-UR-ato" customClass="CircleButton" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="54" y="5" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="acY-be-7d2"/>
+                        <constraint firstAttribute="width" constant="30" id="um9-Di-1af"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="icon_next"/>
+                    <connections>
+                        <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="upY-nC-XS0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzF-Nm-lK7">
+                    <rect key="frame" x="170" y="5" width="35" height="30"/>
+                    <state key="normal" title="2018">
+                        <color key="titleColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="calendarAction:" destination="-1" eventType="touchUpInside" id="l3F-jN-4x8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sul-UR-ato" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1Mv-o8-IU3"/>
+                <constraint firstItem="TRk-Pf-DEP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2T6-J5-PDX"/>
+                <constraint firstItem="pzF-Nm-lK7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5L6-cD-zzs"/>
+                <constraint firstItem="pzF-Nm-lK7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Dtj-lp-xXd"/>
+                <constraint firstItem="sul-UR-ato" firstAttribute="leading" secondItem="WTn-98-MiD" secondAttribute="trailing" constant="8" id="F06-Ll-KAa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TRk-Pf-DEP" secondAttribute="trailing" constant="16" id="Xnl-jM-K1G"/>
+                <constraint firstItem="WTn-98-MiD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eMJ-Js-wRg"/>
+                <constraint firstItem="WTn-98-MiD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="iIA-pz-HZA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="32.5" y="86.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_next" width="13" height="20"/>
+        <image name="icon_prev" width="13" height="20"/>
+    </resources>
+</document>

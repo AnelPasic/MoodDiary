@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DailyCalendarNavigationView" customModule="Mood_Diary" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarButton" destination="Kcg-pT-Mdf" id="Hf4-UG-gkE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-LC-Hm7" customClass="CircleButton" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="16" y="5" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="jhk-zJ-jaw"/>
+                        <constraint firstAttribute="width" constant="30" id="o08-Fv-eg0"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                    <state key="normal" image="icon_prev"/>
+                    <connections>
+                        <action selector="prevWeek:" destination="-1" eventType="touchUpInside" id="YJ9-sO-BAn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsU-Ui-vLr" customClass="CircleButton" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="54" y="5" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="Kyi-e4-JDx"/>
+                        <constraint firstAttribute="height" constant="30" id="szr-2e-yEU"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="icon_next"/>
+                    <connections>
+                        <action selector="nextWeek:" destination="-1" eventType="touchUpInside" id="Euc-K1-iLJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-pT-Mdf">
+                    <rect key="frame" x="136" y="5" width="103" height="30"/>
+                    <state key="normal" title="February. 2018">
+                        <color key="titleColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="calendarButtonAction:" destination="-1" eventType="touchUpInside" id="x38-Im-5C3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvd-SU-TXq" customClass="RoundedButton" customModule="Mood_Diary" customModuleProvider="target">
+                    <rect key="frame" x="285" y="3" width="74" height="34"/>
+                    <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                    <state key="normal" title="Today">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="today:" destination="-1" eventType="touchUpInside" id="Ptn-OW-84R"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="lhf-LC-Hm7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="6yP-u3-3WP"/>
+                <constraint firstItem="Nvd-SU-TXq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="C9b-Fk-Nn1"/>
+                <constraint firstItem="Kcg-pT-Mdf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HLZ-gY-8mz"/>
+                <constraint firstItem="TsU-Ui-vLr" firstAttribute="leading" secondItem="lhf-LC-Hm7" secondAttribute="trailing" constant="8" id="IyF-IA-aHM"/>
+                <constraint firstItem="Kcg-pT-Mdf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fft-zb-MWx"/>
+                <constraint firstItem="TsU-Ui-vLr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="glU-Ni-U6d"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Nvd-SU-TXq" secondAttribute="trailing" constant="16" id="kpC-O6-fJp"/>
+                <constraint firstItem="lhf-LC-Hm7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lmd-bm-UpS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="26.5" y="-178.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_next" width="13" height="20"/>
+        <image name="icon_prev" width="13" height="20"/>
+    </resources>
+</document>
